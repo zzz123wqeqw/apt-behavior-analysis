@@ -1,0 +1,35 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+backend/.venv/
+backend/.pytest_cache/
+*.egg-info/
+
+# ---- 敏感信息（严禁上传）----
+backend/keyfile
+backend/.env
+backend/.env.local
+backend/data/settings.json
+*.key
+
+# ---- 运行产物 / 数据库（可重新生成）----
+backend/data/apt.db
+backend/data/uploads/
+backend/data/intel_reports/
+backend/vite.log
+frontend/vite.log
+
+# ---- 大体积真实数据集（OTRF 公开可下载，按需自行获取）----
+datasets/atomic/
+
+# ---- 前端构建产物 ----
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+
+# ---- 系统 / 编辑器 ----
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/

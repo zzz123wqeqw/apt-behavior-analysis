@@ -1,0 +1,10 @@
+fastapi>=0.110
+uvicorn[standard]>=0.29
+pydantic>=2.6
+requests>=2.31
+httpx>=0.27
+cryptography>=42.0
+pyyaml>=6.0
+python-dotenv>=1.0
+python-multipart>=0.0.9
+pytest>=8.0

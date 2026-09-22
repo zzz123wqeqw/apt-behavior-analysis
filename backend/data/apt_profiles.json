@@ -1,0 +1,42 @@
+{
+  "version": "0.1.0",
+  "updated_at": "2026-09-22",
+  "apts": [
+    {
+      "name": "Kimsuky",
+      "region": "朝鲜",
+      "targets": ["政府", "外交", "智库", "军工"],
+      "behaviors": ["隐蔽数据传输", "长期潜伏", "横向移动"],
+      "ttps": ["鱼叉钓鱼", "宏文档", "HTTP C2", "PowerShell", "计划任务"],
+      "tools": ["BabyShark", "AppleSeed", "PowerShell"],
+      "keywords": ["kimsuky", "babyshark", "appleseed", "secure-update"]
+    },
+    {
+      "name": "Patchwork",
+      "region": "南亚",
+      "targets": ["政府", "外交", "科研"],
+      "behaviors": ["内网横向移动", "隐蔽数据传输"],
+      "ttps": ["Web弱口令", "SMB", "WMI", "PsExec", "DLL侧加载"],
+      "tools": ["CVE-2017-11882", "PowerShell", "wmic"],
+      "keywords": ["patchwork", "hangover", "monsoon"]
+    },
+    {
+      "name": "APT33 (Elfin)",
+      "region": "伊朗",
+      "targets": ["能源", "航空", "政府", "军工"],
+      "behaviors": ["隐蔽数据传输", "痕迹清理", "长期潜伏"],
+      "ttps": ["DNS隧道", "计划任务", "wevtutil清日志", "凭证窃取"],
+      "tools": ["NukeSped", "Remexi", "TURNEDUP", "schtasks"],
+      "keywords": ["apt33", "elfin", "shamoon", "nukesped", "tunnel-notes"]
+    },
+    {
+      "name": "APT29 (Cozy Bear)",
+      "region": "俄罗斯",
+      "targets": ["政府", "智库", "科技", "电信"],
+      "behaviors": ["长期潜伏", "隐蔽数据传输", "内网横向移动", "痕迹清理"],
+      "ttps": ["钓鱼", "PowerShell", "C2框架", "注册表持久化", "计划任务", "WMI"],
+      "tools": ["PowerShell Empire", "Mimikatz", "WMI", "schtasks"],
+      "keywords": ["apt29", "cozy bear", "empire", "mimikatz", "the dukes"]
+    }
+  ]
+}

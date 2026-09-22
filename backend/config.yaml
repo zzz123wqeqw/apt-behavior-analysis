@@ -1,0 +1,36 @@
+# APT 研判系统后端配置（骨架）
+paths:
+  data_dir: "data"
+  output_dir: "data/output"
+
+database:
+  path: "data/apt.db"
+
+llm:
+  provider: "deepseek"          # deepseek / openai_compatible / fallback
+  model: "deepseek-chat"
+  timeout_sec: 60
+  fallback_enabled: true
+
+prefilter:
+  features_file: "data/features.json"
+  window_minutes: 60            # 可疑案例时间窗
+  score_threshold: 3            # 预筛阈值（示例）
+
+profiles:
+  file: "data/apt_profiles.json"
+  rag_topk: 3
+
+filter:
+  min_evidence: 2               # 证据事件数下限
+  confirm_threshold: 0.8
+  review_threshold: 0.6
+
+security:
+  api_token: "dev-token"
+  encrypt_keyfile: "keyfile"
+
+intel:
+  cache_ttl_hours: 24
+  concurrency: 3
+  rate_per_sec: 1

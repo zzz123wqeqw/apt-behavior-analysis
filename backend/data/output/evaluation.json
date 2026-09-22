@@ -1,0 +1,48 @@
+{
+  "report_count": 4,
+  "scenes": {
+    "A": {
+      "gold": [
+        "hidden_channel",
+        "long_term_latency"
+      ],
+      "predicted": [
+        "hidden_channel",
+        "long_term_latency"
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "B": {
+      "gold": [
+        "lateral_movement"
+      ],
+      "predicted": [
+        "lateral_movement"
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "C": {
+      "gold": [
+        "hidden_channel",
+        "trace_cleaning"
+      ],
+      "predicted": [
+        "hidden_channel",
+        "trace_cleaning"
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  },
+  "overall": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "org_attribution_rate": 1.0
+  }
+}

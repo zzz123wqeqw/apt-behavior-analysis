@@ -1,0 +1,45 @@
+{
+  "version": "0.3.0",
+  "updated_at": "2026-09-22",
+  "behaviors": {
+    "lateral_movement": {
+      "name": "内网横向移动",
+      "threshold": 3,
+      "event_rules": [
+        {"field": "dst_port", "op": "eq", "value": 445, "weight": 2},
+        {"field": "process", "op": "in", "value": ["wmic", "psexec", "smbexec", "covenant", "mimikatz"], "weight": 3}
+      ],
+      "agg_rules": [
+        {"field": "distinct_dst_ip_count", "op": "gte", "value": 5, "weight": 3}
+      ]
+    },
+    "hidden_channel": {
+      "name": "隐蔽数据传输",
+      "threshold": 3,
+      "event_rules": [
+        {"field": "domain_entropy", "op": "gte", "value": 3.2, "weight": 3},
+        {"field": "type", "op": "eq", "value": "dns", "weight": 1}
+      ],
+      "agg_rules": []
+    },
+    "long_term_latency": {
+      "name": "长期潜伏",
+      "threshold": 3,
+      "event_rules": [
+        {"field": "hour", "op": "between", "value": [0, 5], "weight": 2}
+      ],
+      "agg_rules": [
+        {"field": "beacon_interval_stable", "op": "eq", "value": true, "weight": 3}
+      ]
+    },
+    "trace_cleaning": {
+      "name": "痕迹清理",
+      "threshold": 3,
+      "event_rules": [
+        {"field": "process", "op": "in", "value": ["wevtutil", "sdelete", "timestomp", "eventvwr"], "weight": 3},
+        {"field": "action", "op": "in", "value": ["delete", "overwrite"], "weight": 2}
+      ],
+      "agg_rules": []
+    }
+  }
+}

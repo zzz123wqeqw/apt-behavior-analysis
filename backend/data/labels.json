@@ -1,0 +1,42 @@
+{
+ "scenes": {
+  "A": {
+   "behaviors": [
+    "hidden_channel",
+    "long_term_latency"
+   ],
+   "hosts": [
+    "work-a1"
+   ],
+   "iocs": [
+    "45.77.10.20",
+    "c2-a.secure-update.net"
+   ]
+  },
+  "B": {
+   "behaviors": [
+    "lateral_movement"
+   ],
+   "hosts": [
+    "web-b1",
+    "web-b2",
+    "web-b3"
+   ],
+   "iocs": [
+    "103.75.12.66"
+   ]
+  },
+  "C": {
+   "behaviors": [
+    "hidden_channel",
+    "trace_cleaning"
+   ],
+   "hosts": [
+    "server-c1"
+   ],
+   "iocs": [
+    "exfil.tunnel-notes.top"
+   ]
+  }
+ }
+}
